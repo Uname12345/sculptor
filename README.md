@@ -12,11 +12,16 @@ Run parallel Claudes safely in containers. Jump between their environments to in
 <a href="https://tryimbue.link/XNL0Ken" target="_blank"><strong>Download for Linux</strong></a>
 </td>
 <td align="center">
+<a href="https://tryimbue.link/IIZhHAd" target="_blank"><strong>Download for Intel Mac [experimental]</strong></a>
+</td>
+
+<td align="center">
 <a href="https://discord.gg/sBAVvHPUTE" target="_blank"><strong>Join us on Discord</strong></a>
 </td>
 </tbody>
 </table>
 </div>
+
 
 <br>
 
