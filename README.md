@@ -87,8 +87,8 @@ Instructions for Apple Silicon (OSX arm64) and Linux follow. Apple Intel instruc
 - Go to Settings > Resources > Resource Allocation and configure the following:
     - Set memory limit to 8GB (or 30% of your system memory, whichever is lower)
     - Disable swap
-    - Set disk limit to 20% of available disk space (minimum 100 GB)
-    - Disable Resource Saver
+    - Set disk limit to 50% of available disk space (minimum 100 GB)
+    - Disable Resource Saver - we've seen it cause issues
 
 **On Linux**:
 Do *not* install Docker Desktop.
