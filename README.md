@@ -84,6 +84,11 @@ Instructions for Apple Silicon (OSX arm64) and Linux follow. Apple Intel instruc
 
 - Ensure your Docker version is 27 or higher according to `docker --version`
 - Go to Settings > General > Virtual Machine Options after download and set “Virtual Machine Manager” to `Docker VMM`
+- Go to Settings > Resources > Resource Allocation and configure the following:
+    - Set memory limit to 8GB (or 30% of your system memory, whichever is lower)
+    - Disable swap
+    - Set disk limit to 20% of available disk space (minimum 100 GB)
+    - Disable Resource Saver
 
 **On Linux**:
 Do *not* install Docker Desktop.
