@@ -383,5 +383,21 @@ Please read this section carefully if you are operating in a secure environment.
 
 If you discover any security issues, please *do not* post them as public issues on GitHub, but email us at [security@imbue.com](mailto:security@imbue.com)
 
+We include our posthog token and sentry dsn as part of sculptor. To view our source code on Linux you can run `./Sculptor.AppImage --appimage-extract` and then use `grep -r "ingest.us.sentry.io"` or `grep -r "phc_"` to view the sentry DSN or posthog tokens.
+
+ > grep -r "phc_"
+u> sr/lib/sculptor/resources/sculptor_backend/_internal/sculptor/services/config_service/telemetry_info.py:PROD_POSTHOG_TOKEN = "phc_j6fTwEMxoWfk3KLYQhhGkm6QpQWCtBXg7fXMxQgaSAd"
+u> sr/lib/sculptor/resources/sculptor_backend/_internal/sculptor/services/config_service/telemetry_info.py:DEV_POSTHOG_TOKEN = "phc_qOlmUqxdThj6MdTx7Qx1cYe9yJ40PwuCa9bjGBNpHIN"
+g> rep: usr/lib/sculptor/resources/sculptor_backend/_internal/cryptography/hazmat/bindings/_rust.abi3.so: binary file matches
+ > grep -r "ingest.us.sentry.io"
+ > usr/lib/sculptor/resources/sculptor_backend/_internal/sculptor/sentry_settings.py:    "https://341e91b4e3409624cc30e65dea668aff@o4504335315501056.ingest.us.sentry.io/4509629913038848"
+ > usr/lib/sculptor/resources/sculptor_backend/_internal/sculptor/sentry_settings.py:    "https://e8c2ef1c8a5ba2b3195b6bb08ebb692b@o4504335315501056.ingest.us.sentry.io/4509674080436224"
+ > usr/lib/sculptor/resources/sculptor_backend/_internal/sculptor/sentry_settings.py:    "https://19db0a11d653c03f1ac2d1196ed7fa21@o4504335315501056.ingest.us.sentry.io/4509724899213313"
+ > usr/lib/sculptor/resources/sculptor_backend/_internal/sculptor/sentry_settings.py:    "https://0068c22e8d10500b6c854838870f137a@o4504335315501056.ingest.us.sentry.io/4509531732049920"
+ > usr/lib/sculptor/resources/sculptor_backend/_internal/sculptor/sentry_settings.py:    "https://60712d56ac0cb234bc5b1aac5d08f937@o4504335315501056.ingest.us.sentry.io/4509759864504320"
+ > usr/lib/sculptor/resources/sculptor_backend/_internal/sculptor/sentry_settings.py:    "https://f5972a6df675ac67540b0c5db3ea2d75@o4504335315501056.ingest.us.sentry.io/4509759869419520"
+ > usr/lib/sculptor/resources/sculptor_backend/_internal/sculptor/services/config_service/telemetry_info.py:PROD_SENTRY_DSN = "https://485610202dcd8c5251e4d8429ff244b3@o4504335315501056.ingest.us.sentry.io/4510007301111808"
+ > usr/lib/sculptor/resources/sculptor_backend/_internal/sculptor/services/config_service/telemetry_info.py:DEV_SENTRY_DSN = "https://188a4c98df33ef883bac65ae8396ee7f@o4504335315501056.ingest.us.sentry.io/4509956912250880"
+
 # License
 © Imbue, Inc. All rights reserved. Use is subject to Imbue's [Research Preview Terms of Service](https://imbue.com/terms/).
